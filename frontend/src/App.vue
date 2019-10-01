@@ -2,12 +2,28 @@
   <div id="app">
     <img src="./assets/logo.png">
     <router-view/>
+    <button @click="test()">CLICK ME</button>
   </div>
 </template>
 
 <script>
+import api from './api/api'
+
 export default {
-  name: 'App'
+  name: 'App',
+  methods: {
+    test(){
+      console.log('got it')
+      api.getCompAPI(
+        (success) => {
+          console.log(success)
+        },
+        (error) => {
+          console.log(error)
+        }
+      )
+    }
+  }
 }
 </script>
 
