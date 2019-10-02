@@ -17,20 +17,34 @@
 
     <v-content>
       <HelloWorld/>
+      <button @click="test()">CLICK ME</button>
     </v-content>
   </v-app>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld';
+import api from './api/api'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
   },
+  methods: {
+    test(){
+      console.log('got it')
+      api.getCompAPI(
+        (success) => {
+          console.log(success)
+        },
+        (error) => {
+          console.log(error)
+        }
+      )
+    }
+  },
   data: () => ({
-    //
   }),
 };
 </script>
