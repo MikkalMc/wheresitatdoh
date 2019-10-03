@@ -3,52 +3,52 @@
     <v-row align="center">
        
        <v-col class="d-flex" cols="12" sm="6">
-        <v-select
+        <v-autocomplete
           :items="Type"
           label="Type"
           outlined
-        ></v-select>
+        ></v-autocomplete>
       </v-col>
 
-            <v-col class="d-flex" cols="12" sm="6">
-        <v-select
+        <v-col class="d-flex" cols="12" sm="6">
+        <v-autocomplete
           :items="Status"
           label="Status"
           outlined
-        ></v-select>
+        ></v-autocomplete>
       </v-col>
 
       <v-col class="d-flex" cols="12" sm="6">
-        <v-select
+        <v-autocomplete
           :items="Level"
           label="Level"
           outlined
-        ></v-select>
+        ></v-autocomplete>
       </v-col>
       
       
-            <v-col class="d-flex" cols="12" sm="6">
-        <v-select
+        <v-col class="d-flex" cols="12" sm="6">
+        <v-autocomplete
           :items="Faculty"
           label="Faculty"
           outlined
-        ></v-select>
+        ></v-autocomplete>
       </v-col>
 
         <v-col class="d-flex" cols="12" sm="6">
-        <v-select
+        <v-autocomplete
           :items="Day"
           label="Day"
           outlined
-        ></v-select>
+        ></v-autocomplete>
       </v-col>
 
         <v-col class="d-flex" cols="12" sm="6">
-        <v-select
+        <v-autocomplete
           :items="Time"
           label="Time"
           outlined
-        ></v-select>
+        ></v-autocomplete>
       </v-col>
 
     </v-row>
@@ -58,7 +58,7 @@
 <script>
   export default {
     data: () => ({
-      Time: ['Foo', 'Bar', 'Fizz', 'Buzz'],
+      Type: ['Foo', 'Bar', 'Fizz', 'Buzz'],
       Status: ['Foo', 'Bar', 'Fizz', 'Buzz'],
       Level: ['Foo', 'Bar', 'Fizz', 'Buzz'],
       Faculty: ['Foo', 'Bar', 'Fizz', 'Buzz'],
