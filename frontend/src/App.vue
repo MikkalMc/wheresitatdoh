@@ -4,10 +4,10 @@
     <button @click="test()">CLICK ME</button>
   </div>
   -->
-  <div id ="filterdiv">
+  <!-- <div id ="filterdiv">
     <filters>
     </filters>
-  </div>
+  </div> -->
   <v-app>
     <v-content>
       <HelloWord/>
@@ -17,13 +17,34 @@
 
 <script>
   import Filters from './components/Filters'
+  import HelloWord from './components/Helloworld';
+  import api from './api/api'
 
   export default {
-    name: 'filterdiv',
+    
+    //name: 'filterdiv',
+    name: 'App',
     components: {
-      'filters' : Filters
-    }
-  }
+      //'filters' : Filters
+      HelloWord,
+    },
+    methods:{
+      test(){
+        console.log('got it')
+        api.getCompAPI(
+          (success) => {
+             console.log(success)
+          },
+          (error) => {
+             console.log(error)
+          }
+        )
+      }
+    },
+    data: () => ({
+
+    }),
+  };
 </script>
 
 <style>
