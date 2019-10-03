@@ -23,13 +23,13 @@
 </template>
 
 <script>
-import HelloWorld from './components/Filters'
+import Filters from './components/Filters'
 import api from './api/api'
 
 export default {
   name: 'App',
   components: {
-    Filters,
+    Filters
   },
   methods: {
     test(){
@@ -46,5 +46,5 @@ export default {
   },
   data: () => ({
   }),
-};
+}
 </script>
