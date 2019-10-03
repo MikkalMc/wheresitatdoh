@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import HelloWorld from './components/Filters';
+import HelloWorld from './components/Filters'
 import api from './api/api'
 
 export default {

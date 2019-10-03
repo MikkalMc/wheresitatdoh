@@ -32,9 +32,9 @@
 <script>
   export default {
     data: () => ({
-      Semester: ['Foo', 'Bar', 'Fizz', 'Buzz'],
-      Class: ['Foo', 'Bar', 'Fizz', 'Buzz'],
-      Level: ['Foo', 'Bar', 'Fizz', 'Buzz'],
+      Semester: ['spring 2019', 'fall 2019', 'spring 2020', 'fall 2020'],
+      Class: ['Class A', 'Class B', 'Class C', 'Class D'],
+      Level: ['100', '200', '300', '400', '500'],
     }),
   }
 </script>
