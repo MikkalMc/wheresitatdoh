@@ -1,30 +1,29 @@
 <template>
+  <!--
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
     <button @click="test()">CLICK ME</button>
   </div>
+  -->
+  <div id ="filterdiv">
+    <filters>
+    </filters>
+  </div>
+  <v-app>
+    <v-content>
+      <HelloWord/>
+    </v-content>  
+  </v-app>
 </template>
 
 <script>
-import api from './api/api'
+  import Filters from './components/Filters'
 
-export default {
-  name: 'App',
-  methods: {
-    test(){
-      console.log('got it')
-      api.getCompAPI(
-        (success) => {
-          console.log(success)
-        },
-        (error) => {
-          console.log(error)
-        }
-      )
+  export default {
+    name: 'filterdiv',
+    components: {
+      'filters' : Filters
     }
   }
-}
 </script>
 
 <style>
