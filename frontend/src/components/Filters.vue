@@ -2,25 +2,22 @@
   <v-container fluid>
     <v-col align="center">
        <v-row class="d-flex" cols="12" sm="6">
-        <v-select
-          :items="Semester"
-          label="Semester"
-          outlined
-        ></v-select>
+        <v-autocomplete
+         label="Semester"
+        :items="Semester"
+        ></v-autocomplete>
       </v-row>
       <v-row class="d-flex" cols="12" sm="6">
-        <v-select
-          :items="Class"
-          label="Class"
-          outlined
-        ></v-select>
+         <v-autocomplete
+         label="Class"
+        :items="Class"
+        ></v-autocomplete>
       </v-row>
       <v-row class="d-flex" cols="12" sm="6">
-        <v-select
-          :items="Level"
-          label="Level"
-          outlined
-        ></v-select>
+        <v-autocomplete
+         label="Level"
+        :items="Level"
+        ></v-autocomplete>
       </v-row>
     </v-col>
   </v-container>
@@ -28,10 +25,12 @@
 
 <script>
 export default{
-  data:()=>({
+  data(){
+    return{
     Semester:['spring 2019','fall 2019','spring 2020','fall 2020'],
     Class:['Class A','Class B','Class C','Class D'],
     Level:['100','200','300','400','500'],
-  }),
+    }
+  },
 }
 </script>
