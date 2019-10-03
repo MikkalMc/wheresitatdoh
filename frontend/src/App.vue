@@ -1,59 +1,50 @@
 <template>
-  <!--
-  <div id="app">
-    <button @click="test()">CLICK ME</button>
-  </div>
-  -->
-  <!-- <div id ="filterdiv">
-    <filters>
-    </filters>
-  </div> -->
   <v-app>
+    <!-- <v-app-bar app>
+      <v-toolbar-title class="headline text-uppercase">
+        <span>Vuetify</span>
+        <span class="font-weight-light">MATERIAL DESIGN</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn
+        text
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+      >
+        <span class="mr-2">Latest Release</span>
+      </v-btn>
+    </v-app-bar> -->
+
     <v-content>
-      <HelloWord/>
-    </v-content>  
+      <Filters/>
+      <!-- <button @click="test()">CLICK ME</button> -->
+    </v-content>
   </v-app>
 </template>
 
 <script>
-  import Filters from './components/Filters'
-  import HelloWord from './components/Helloworld';
-  import api from './api/api'
+import HelloWorld from './components/Filters';
+import api from './api/api'
 
-  export default {
-    
-    //name: 'filterdiv',
-    name: 'App',
-    components: {
-      //'filters' : Filters
-      HelloWord,
-    },
-    methods:{
-      test(){
-        console.log('got it')
-        api.getCompAPI(
-          (success) => {
-             console.log(success)
-          },
-          (error) => {
-             console.log(error)
-          }
-        )
-      }
-    },
-    data: () => ({
-
-    }),
-  };
+export default {
+  name: 'App',
+  components: {
+    Filters,
+  },
+  methods: {
+    test(){
+      console.log('got it')
+      api.getCompAPI(
+        (success) => {
+          console.log(success)
+        },
+        (error) => {
+          console.log(error)
+        }
+      )
+    }
+  },
+  data: () => ({
+  }),
+};
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

@@ -1,50 +1,40 @@
 <template>
-  <div class="filter">
-    <label for="autocomplete-dropdown"> Class </label>
-    <dropdown id="autocomplete-dropdown" :options="classOptions" v-model="selectedClass"></dropdown>
-  </div>
+  <v-container fluid>
+    <v-row align="center">      
+       <v-col class="d-flex" cols="12" sm="6">
+        <v-select
+          :items="Semester"
+          label="Semester"
+          outlined
+        ></v-select>
+      </v-col>
+
+            <v-col class="d-flex" cols="12" sm="6">
+        <v-select
+          :items="Class"
+          label="Class"
+          outlined
+        ></v-select>
+      </v-col>
+
+      <v-col class="d-flex" cols="12" sm="6">
+        <v-select
+          :items="Level"
+          label="Level"
+          outlined
+        ></v-select>
+      </v-col>   
+         
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-
-  import Dropdown from '@/components/Dropdown'
-  import AutocompleteDropdown from '@/components/AutocompleteDropdown'
-export default {
-    components: {
-        'dropdown' : Dropdown,
-        'autocomplete-dropdown' : AutocompleteDropdown
-    },
-
-    data () {
-        return {
-            selectedClass: 'ClassA',
-            classOptions: {
-                'ClassA' : 'ClassA',
-                'ClassB' : 'ClassB',
-                'ClassC' : 'ClassC',
-                'ClassD' : 'ClassD',
-                'ClassE' : 'ClassE'
-            }
-        }
-    }
-}
-
-
+  export default {
+    data: () => ({
+      Semester: ['Foo', 'Bar', 'Fizz', 'Buzz'],
+      Class: ['Foo', 'Bar', 'Fizz', 'Buzz'],
+      Level: ['Foo', 'Bar', 'Fizz', 'Buzz'],
+    }),
+  }
 </script>
-
-<style scoped>
-
-.filters {
-    width: 200px;
-  margin: 0 auto
-}
-
-.filter {
-  text-align: right;
-}
-
-label {
-  display: block;
-}
-
-</style>

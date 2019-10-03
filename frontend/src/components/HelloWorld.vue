@@ -1,50 +1,39 @@
 <template>
   <v-container fluid>
-    <v-row align="center">
-      <v-col class="d-flex" cols="12" sm="6">
+    <v-row align="center">      
+       <v-col class="d-flex" cols="12" sm="6">
         <v-select
-          :items="items"
-          label="Standard"
+          :items="Semester"
+          label="Semester"
+          outlined
         ></v-select>
       </v-col>
 
-      <v-col class="d-flex" cols="12" sm="6">
+            <v-col class="d-flex" cols="12" sm="6">
         <v-select
-          :items="items"
-          filled
-          label="Filled style"
-        ></v-select>
-      </v-col>
-
-      <v-col class="d-flex" cols="12" sm="6">
-        <v-select
-          :items="items"
-          label="Outlined style"
+          :items="Class"
+          label="Class"
           outlined
         ></v-select>
       </v-col>
 
       <v-col class="d-flex" cols="12" sm="6">
         <v-select
-          :items="items"
-          label="Solo field"
-          solo
+          :items="Level"
+          label="Level"
+          outlined
         ></v-select>
-      </v-col>
+      </v-col>      
     </v-row>
   </v-container>
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  data () =>{
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
+  export default {
+    data: () => ({
+      Semester: ['Foo', 'Bar', 'Fizz', 'Buzz'],
+      Class: ['Foo', 'Bar', 'Fizz', 'Buzz'],
+      Level: ['Foo', 'Bar', 'Fizz', 'Buzz'],
+    }),
   }
-}
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-
