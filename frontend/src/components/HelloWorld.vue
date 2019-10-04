@@ -52,11 +52,13 @@
       </v-col>
 
     </v-row>
+
     <v-row>
         <v-col class="text-center" cols="12" sm="12">
-        
-        <div class="my-2">
-          <v-btn depressed large color="deep-orange darken-1">Search</v-btn>
+        <div class="ma-2">
+          <v-btn depressed large color="deep-orange darken-1">
+            Search
+          </v-btn>
         </div>
       </v-col>
     </v-row>
