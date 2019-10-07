@@ -17,19 +17,22 @@
 
     <v-content>
       <HelloWorld/>
+      <AdditionalFilters/>
       <!-- <button @click="test()">CLICK ME</button> -->
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import HelloWorld from './components/HelloWorld'
+import AdditionalFilters from './components/AdditionalFilters'
 import api from './api/api'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
+    AdditionalFilters,
   },
   methods: {
     test(){
