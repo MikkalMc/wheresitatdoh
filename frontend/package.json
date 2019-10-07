@@ -13,10 +13,13 @@
     "unit": "jest --config test/unit/jest.conf.js --coverage"
   },
   "dependencies": {
+    "@mdi/font": "^3.6.95",
     "axios": "^0.19.0",
+    "roboto-fontface": "*",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vuetify": "^2.0.0"
+    "vuetify": "^2.0.0",
+    "yarn": "^1.19.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -64,7 +67,7 @@
     "shelljs": "^0.7.6",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
-    "vue-cli-plugin-vuetify": "^0.6.3",
+    "vue-cli-plugin-vuetify": "git+https://github.com/vuetifyjs/vue-cli-plugin-vuetify.git#dev",
     "vue-jest": "^1.0.2",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",

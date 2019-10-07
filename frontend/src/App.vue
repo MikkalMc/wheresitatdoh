@@ -2,6 +2,7 @@
   <v-app>
     <v-content>
       <Filters/>
+      <button @click="test()">CLICK ME</button>
     </v-content>
   </v-app>
 </template>
