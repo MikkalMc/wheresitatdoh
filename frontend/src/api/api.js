@@ -15,3 +15,4 @@ const getCompAPI = (success, error) => {
 export default {
   getCompAPI
 }
+
