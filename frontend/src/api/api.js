@@ -11,6 +11,13 @@ const getCompAPI = (success, error) => {
   )
 }
 
+const getClassByDepartmentAPI = (payload, success, error) => {
+  axios.get(`https://api.metalab.csun.edu/curriculum/api/2.0/classes/${payload}`, payload).then(
+    response => success(response.data),
+    response => error(response),
+  );
+};
+
 
 export default {
   getCompAPI
