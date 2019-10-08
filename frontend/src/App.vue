@@ -1,20 +1,26 @@
 <template>
   <v-app>
+    <!-- <v-navigation-drawer/> -->
     <v-content>
-      <Filters/>
-      <button @click="test()">CLICK ME</button>
+      <!-- <Filters/>
+      <AdditionalFilters/> -->
+      <Form/>
     </v-content>
   </v-app>
 </template>
 
 <script>
 import Filters from './components/Filters'
+import AdditionalFilters from './components/AdditionalFilters'
+import Form from './components/Form'
 import api from './api/api'
 
 export default {
   name: 'App',
   components: {
-    Filters
+    Filters,
+    Form,
+    AdditionalFilters,
   },
   methods: {
     test(){

@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class = "container">
+  <v-container fluid>
     <v-col align="center">
        <v-row class="d-flex" cols="12" sm="6">
         <v-autocomplete
@@ -36,8 +36,4 @@ export default{
 </script>
 
 <style scoped>
-  .container{
-    padding: 400px;
-
-  }
 </style>
